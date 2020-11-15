@@ -1,0 +1,312 @@
+:root {
+	font-size: 16px;
+}
+/*full page is taken as a container with flex direction colum*/
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 6vw;
+}
+/*row class to make every section a row */
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+/*title class */
+.title {
+	font-family: 'Bitter', serif;
+	text-align: center;
+	font-size: 3rem;
+}
+.titleUnderline {
+    width: 40px;
+    height: 3px;
+    background-color: #34c6d3;
+    margin: 0 auto 30px auto;
+}
+/*section1 classes */
+.sec1 {
+	background: #302b2b;
+    border: 1px solid #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0px 3px 20px 2px #12CBC4;
+    display: flex;
+    flex-direction: column;
+}
+
+.sec1 .heading {
+	color: #12CBC4;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1vh;
+    padding: 5vw;
+}
+
+.sec1 .subHeading {
+	color: #12CBC4;
+    font-size: 1.3rem;
+    margin: 0;
+    margin-bottom: 1.5vw;
+    padding: 0 5vw 2vw;
+}
+
+
+/* section2 classes */ 
+.sec2 {	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around; 
+}
+.sec2 .myImage {
+	margin-right: 3vw;
+	box-shadow: 0px 3px 20px 2px #364763;
+}
+.paragraph {
+	font-size: 1.5rem;
+    color: #2c2c2c;
+}
+
+/*section3 classes*/
+.sec3 {
+	background-color: #4472c4;
+	height: 50vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+    box-shadow: 0px 3px 20px 2px #364763;
+}
+
+.card {
+	background-color: #8faadc;
+	width: 18vw;
+	height: 40vh;
+	align-self:  center;
+	border-radius: 25px;
+    box-shadow: 0px 3px 20px 2px #364763;
+
+}
+
+.card .img {
+	margin-top: 1.5vh;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.card .imgText {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.card .subText {
+	margin : 0.2vh;
+	text-align: center;
+	font-size: 1.1rem;
+}
+/*section4 classes*/
+.sec4 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.sec4 .row .project {
+	width: 25vw;
+	margin-left: 2vw;
+}
+.sec4 .row .project a {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+/*footer section classes */
+
+footer {
+	background-color: khaki;
+    box-shadow: -2px -7px 20px 3px #364763;
+
+	text-align: center;
+}
+.fab {
+	margin-top: 1.5vh;
+	margin-bottom: 1.5vh;
+}
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+/* Media queries start here*/
+
+/*extra large devices */
+@media (min-width:1401px) {
+.card {
+    height: 44vh;
+    }
+}
+
+/* large devices */
+/* @media (min-width:1200px)and (max-width:1400px){
+    .sec2 {
+        height: 75vh;
+    }
+} */
+
+/*medium  devices(tablets) */
+@media (min-width:992px) and (max-width:1199px) {
+    .row {
+        flex-direction: column;
+    }
+    .paragraph {
+        margin-top: 5vh;
+    }
+    .sec3 {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .card {
+        width: 90%;
+        margin: 8px;
+        height: auto;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+    .card .subText {
+        font-size: 1.5rem;
+    }
+    .card .imgText {
+        font-size: 1.8rem;
+    }
+    .myImage {
+        width: 60vw;
+    }
+}
+
+/*small devices  landscape phones and portrait tabs*/
+@media (min-width:768px) and (max-width:991px){
+    .row {
+        flex-direction: column;
+    }
+    .paragraph {
+        margin-top: 5vh;
+    }
+    .sec3 {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .card {
+        width: 90%;
+        margin: 8px;
+    }
+    .myImage {
+        width: 60vw;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    .card .subText {
+        font-size: 1.2rem;
+    }
+}
+/*small devices with big display*/
+@media (min-width:481px) and (max-width:769px){
+    .row {
+        flex-direction: column;
+    }
+    .paragraph {
+        margin-top: 5vh;
+    }
+    .sec3 {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .card {
+        width: 90%;
+        margin: 8px;
+        height: auto;
+    }
+    .myImage {
+        width: 60vw;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    .card .subText {
+        font-size: 1.2rem;
+    }
+    .sec4 {
+        flex-direction: column;
+    }
+    .sec4 .row .project {
+        width: 100% ;
+    }
+}
+/*small devices */
+@media (max-width:480px){
+    .row {
+        flex-direction: column;
+    }
+    .paragraph {
+        margin-top: 5vh;
+    }
+    .sec3 {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .card {
+        width: 90%;
+        height: 100%;
+        margin: 8px;
+    }
+    .sec4 {
+        flex-direction: column;
+    }
+    .sec4 .row .project {
+        width: 100% ;
+    }
+    footer {
+        margin-top: 5vh;
+    }
+
+}
+
+/* extra small devices */
+@media (max-width:320px){
+    .row {
+        flex-direction: column;
+    }
+    .paragraph {
+        margin-top: 5vh;
+        font-size: 1rem;
+    }
+    .sec3 {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .card {
+        width: 90%;
+        height: 100%;
+        margin: 8px;
+    }
+    .sec4 {
+        flex-direction: column;
+    }
+    .sec4 .row .project {
+        width: 100% ;
+    }
+    footer {
+        margin-top: 5vh;
+    }
+}
